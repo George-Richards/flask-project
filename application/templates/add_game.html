@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<form method="POST" action="">
+    {{ form.hidden_tag() }}
+    {{ form.game_date.label }}: {{ form.game_date }}<br>
+    {{ form.team_name.label }}: {{ form.team_name }}<br>
+    {{ form.home_away.label }}: {{ form.home_away }}<br>
+    {{ form.result.label }}: {{ form.result }}<br>
+    {{ form.opponent.label }}: {{ form.opponent }}<br>
+    {{ form.comment.label }}: {{ form.comment }}<br>
+    {{ form.submit }}
+</form>
+{% endblock body %}

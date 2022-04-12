@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<h2>A list of all games entered:</h2> 
+{% for game in all_games %}
+<p>
+    {{ game.game_date }}: 
+    <strong> {{ game.team_name }} </strong>
+    vs {{ game.opponent }} 
+    - {{ game.home_away }}
+    - <strong> {{ game.result }} </strong>
+    - {{ game.comment }}
+
+</p> 
+{% endfor %}
+{% endblock body %}
+
