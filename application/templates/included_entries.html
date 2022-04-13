@@ -6,7 +6,7 @@
 {% for game in ordered_arsenal %}
 <p>
     {{ game.game_date }}: 
-    <strong> {{ game.team_name }} </strong>
+    <strong> {{ game.fk_team_name }} </strong>
     vs {{ game.opponent }} 
     - {{ game.home_away }}
     - <strong> {{ game.result }} </strong>
@@ -16,6 +16,71 @@
 {% endfor %}
 <h3>Chelsea: </h3> 
 {% for game in ordered_chelsea %}
+<p>
+    {{ game.game_date }}: 
+    <strong> {{ game.fk_team_name }} </strong>
+    vs {{ game.opponent }} 
+    - {{ game.home_away }}
+    - <strong> {{ game.result }} </strong>
+    - {{ game.comment }}
+
+</p> 
+{% endfor %}
+
+<h3>Chelsea: </h3> 
+{% for game in ordered_chelsea %}
+<p>
+    {{ game.game_date }}: 
+    <strong> {{ game.fk_team_name }} </strong>
+    vs {{ game.opponent }} 
+    - {{ game.home_away }}
+    - <strong> {{ game.result }} </strong>
+    - {{ game.comment }}
+
+</p> 
+{% endfor %}
+
+<h3>Liverpool: </h3> 
+{% for game in ordered_liverpool %}
+<p>
+    {{ game.game_date }}: 
+    <strong> {{ game.fk_team_name }} </strong>
+    vs {{ game.opponent }} 
+    - {{ game.home_away }}
+    - <strong> {{ game.result }} </strong>
+    - {{ game.comment }}
+
+</p> 
+{% endfor %}
+
+<h3>Manchester City: </h3> 
+{% for game in ordered_man_city %}
+<p>
+    {{ game.game_date }}: 
+    <strong> {{ game.fk_team_name }} </strong>
+    vs {{ game.opponent }} 
+    - {{ game.home_away }}
+    - <strong> {{ game.result }} </strong>
+    - {{ game.comment }}
+
+</p> 
+{% endfor %}
+
+<h3>Manchester United: </h3> 
+{% for game in ordered_man_utd %}
+<p>
+    {{ game.game_date }}: 
+    <strong> {{ game.fk_team_name }} </strong>
+    vs {{ game.opponent }} 
+    - {{ game.home_away }}
+    - <strong> {{ game.result }} </strong>
+    - {{ game.comment }}
+
+</p> 
+{% endfor %}
+
+<h3>Tottenham: </h3> 
+{% for game in ordered_tottenham %}
 <p>
     {{ game.game_date }}: 
     <strong> {{ game.fk_team_name }} </strong>

@@ -1,8 +1,7 @@
-add_game.html
-
 {% extends "layout.html" %}
 
 {% block body %}
+<h2> Adding a new game entry </h2>
 <form method="POST" action="">
     {{ form.hidden_tag() }}
     {{ form.game_date.label }}: {{ form.game_date }}<br>

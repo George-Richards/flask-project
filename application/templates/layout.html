@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <head>
-    <title>Top 6 League Table App</title>
+    <title>Recent Form App</title>
 </head>
 <body style="background-color:#1cc9b8;">
     <navbar>
-        | <a href="{{ url_for('add_game') }}">Add Game Entry</a> |
+        <a href="{{ url_for('index') }}">Homepage</a>
+        <a href="{{ url_for('team_info') }}">Team Information</a> | 
+        <a href="{{ url_for('add_game') }}">Add Game Entry</a> |
         <a href="{{ url_for('all_entries') }}">All Entries</a> | 
         <a href="{{ url_for('arsenal_entries') }}">Arsenal</a> | 
         <a href="{{ url_for('chelsea_entries') }}">Chelsea</a> | 
@@ -12,10 +14,10 @@
         <a href="{{ url_for('man_city_entries') }}">Manchester City</a> | 
         <a href="{{ url_for('man_utd_entries') }}">Manchester United</a> | 
         <a href="{{ url_for('tottenham_entries') }}">Tottenham</a> | 
-        <a href="{{ url_for('included_entries') }}">Included Entries</a> |  
+        <a href="{{ url_for('included_entries') }}">Included Entries</a> |    
 
     </navbar>
-    <h1>Top 6 League Table App</h1>
     {% block body %}
+
     {% endblock body %}
 </body>

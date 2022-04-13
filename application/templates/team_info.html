@@ -1,17 +1,16 @@
-{% extends layout.html %}
+{% extends "layout.html" %}
 {% block body %}
 
-<h2>Here's information about the teams</h2> 
+<h2>A list of all information about the teams</h2> 
 {% for team in all_teams %}
 <p>
+    <b> Team Name: </b>{{ team.team_name }} <br>
+    <b> Manager: </b>{{ team.manager }} <br> 
+    <b> Stadium: </b>{{ team.ground }} <br> 
+    
 
-{{ team.id }}
-{{ team.team_name }}
-{{ team.manager }}
-{{ team.ground }}
-
-</p>
-{% endFor %}
+</p> 
+{% endfor %}
 {% endblock body %}
 
 

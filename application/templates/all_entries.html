@@ -13,9 +13,9 @@
     - <i>{{ game.comment }}</i>
     - <a href="{{ url_for('delete_game', id=game.id) }}">Delete</a>
     {% if game.included == False %}
-    <a href="{{ url_for('include_game', included=True, id=game.id) }}">Included</a><br>
+    <a href="{{ url_for('include_game', included=True, id=game.id) }}">Not Included</a><br>
     {% else %}
-    <a href="{{ url_for('include_game', included=False, id=game.id) }}">Not included</a><br>
+    <a href="{{ url_for('include_game', included=False, id=game.id) }}">Included</a><br>
     {% endif %} 
 </p> 
 {% endfor %} <br>

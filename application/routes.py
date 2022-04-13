@@ -1,10 +1,6 @@
 from application import app, db
-from application.models import Teams
-from flask import render_template, request, redirect, url_for
-
-from application import app, db
 from application.forms import EntryForm
-from application.models import Games
+from application.models import Games, Teams
 from flask import render_template, request, redirect, url_for
 
 @app.route('/')
@@ -64,12 +60,12 @@ def tottenham_entries():
 
 @app.route('/included_entries')
 def included_entries():
-    ordered_arsenal = Games.query.filter_by(fk_team_name='arsenal').order_by(Games.game_date.desc()).limit(5)
-    ordered_chelsea = Games.query.filter_by(fk_team_name='chelsea').order_by(Games.game_date.desc()).limit(5)
-    ordered_liverpool = Games.query.filter_by(fk_team_name='liverpool').order_by(Games.game_date.desc()).limit(5)
-    ordered_man_city = Games.query.filter_by(fk_team_name='man_city').order_by(Games.game_date.desc()).limit(5)
-    ordered_man_utd = Games.query.filter_by(fk_team_name='man_utd').order_by(Games.game_date.desc()).limit(5)
-    ordered_tottenham = Games.query.filter_by(fk_team_name='tottenham').order_by(Games.game_date.desc()).limit(5)
+    ordered_arsenal = Games.query.filter_by(fk_team_name='arsenal', included=True).order_by(Games.game_date.desc()).limit(5)
+    ordered_chelsea = Games.query.filter_by(fk_team_name='chelsea', included=True).order_by(Games.game_date.desc()).limit(5)
+    ordered_liverpool = Games.query.filter_by(fk_team_name='liverpool', included=True).order_by(Games.game_date.desc()).limit(5)
+    ordered_man_city = Games.query.filter_by(fk_team_name='man_city', included=True).order_by(Games.game_date.desc()).limit(5)
+    ordered_man_utd = Games.query.filter_by(fk_team_name='man_utd', included=True).order_by(Games.game_date.desc()).limit(5)
+    ordered_tottenham = Games.query.filter_by(fk_team_name='tottenham', included=True).order_by(Games.game_date.desc()).limit(5)
     return render_template('included_entries.html', 
     ordered_arsenal=ordered_arsenal,
     ordered_chelsea=ordered_chelsea,
@@ -96,6 +92,11 @@ def delete_game(id):
     db.session.delete(game)
     db.session.commit()
     return redirect(url_for('all_entries'))
+
+@app.route('/team_info')
+def team_info():
+    all_teams = Teams.query.all()
+    return render_template('team_info.html', all_teams=all_teams)
 
 
 

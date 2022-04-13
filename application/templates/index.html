@@ -1,9 +1,20 @@
 {% extends "layout.html" %}
 {% block body %}
 
-<h2> This is the homepage. </h2> <br>
-<h2> To look at the data stored for each team click below: </h2> <br>
-<h2> <a href="{{ url_for('arsenal_entries') }}">Arsenal</a><br> </h2>
-
+<h2> Welcome to the recent form app! </h2> <br>
+<p>
+   <h3>This app allows you to keep a record of <br>
+    premier league games. When you add an <br>
+    entry the game will be added to that <br>
+    teams relevant database. You can add in <br>
+    a comment to each of the games such as <br>
+    <i>"captain injured"</i> or <i>"chelsea red card"</i> <br>
+    and from there can choose whether or not <br>
+    to include that game in your recent form. </h3> <br> <br>
+</p>
+<p>
+    To use the page click on the links above <br>
+    You are currently on the Homepage
+</p>
 {% endblock body %}
 
