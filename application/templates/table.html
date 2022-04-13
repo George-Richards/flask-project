@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<h2>A table show recent points:</h2> 
+{% for game in ordered_arsenal %}
+<p>
+{{ sum(game.points) }}
+</p> 
+{% endfor %}
+{% endblock body %}

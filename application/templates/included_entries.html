@@ -10,18 +10,7 @@
     vs {{ game.opponent }} 
     - {{ game.home_away }}
     - <strong> {{ game.result }} </strong>
-    - {{ game.comment }}
-
-</p> 
-{% endfor %}
-<h3>Chelsea: </h3> 
-{% for game in ordered_chelsea %}
-<p>
-    {{ game.game_date }}: 
-    <strong> {{ game.fk_team_name }} </strong>
-    vs {{ game.opponent }} 
-    - {{ game.home_away }}
-    - <strong> {{ game.result }} </strong>
+    - {{ game.points }}
     - {{ game.comment }}
 
 </p> 
@@ -35,7 +24,9 @@
     vs {{ game.opponent }} 
     - {{ game.home_away }}
     - <strong> {{ game.result }} </strong>
+    - {{ game.points }}
     - {{ game.comment }}
+
 
 </p> 
 {% endfor %}
@@ -48,6 +39,7 @@
     vs {{ game.opponent }} 
     - {{ game.home_away }}
     - <strong> {{ game.result }} </strong>
+    - {{ game.points }}
     - {{ game.comment }}
 
 </p> 
@@ -61,6 +53,7 @@
     vs {{ game.opponent }} 
     - {{ game.home_away }}
     - <strong> {{ game.result }} </strong>
+    - {{ game.points }}
     - {{ game.comment }}
 
 </p> 
@@ -74,6 +67,7 @@
     vs {{ game.opponent }} 
     - {{ game.home_away }}
     - <strong> {{ game.result }} </strong>
+    - {{ game.points }}
     - {{ game.comment }}
 
 </p> 

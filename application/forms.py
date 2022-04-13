@@ -21,6 +21,11 @@ class EntryForm(FlaskForm):
         ("loss", "Loss"),
         ("draw", "Draw")
     ])
+    points = SelectField('How many points did they gain', choices=[
+        (3, 3),
+        (1, 1),
+        (0, 0)
+    ])
     opponent = StringField('Which team did they play?', validators=[
         DataRequired(), 
         Length(max=30)

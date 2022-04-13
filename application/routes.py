@@ -15,6 +15,7 @@ def add_game():
         fk_team_name=form.fk_team_name.data,
         home_away=form.home_away.data,
         result=form.result.data,
+        points=form.points.data, 
         opponent=form.opponent.data,
         comment=form.comment.data)
         db.session.add(game)
@@ -98,7 +99,10 @@ def team_info():
     all_teams = Teams.query.all()
     return render_template('team_info.html', all_teams=all_teams)
 
-
+@app.route('/table')
+def table():
+    sum_arsenal = sum(Games.query.get(points))
+    return render_template('table.html', sum_arsenal=sum_arsenal)
 
 
 

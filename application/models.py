@@ -12,7 +12,8 @@ class Games(db.Model):
     game_date = db.Column(db.DateTime, nullable=False, default=datetime.now())
     home_away = db.Column(db.String(4), nullable=False)
     result = db.Column(db.String(4), nullable=False)
+    points = db.Column(db.Integer, nullable=False)
     opponent = db.Column(db.String(100), nullable=False)
     comment = db.Column(db.String(100), nullable=True)
-    included = db.Column(db.Boolean, nullable=False, default=False)
+    included = db.Column(db.Boolean, nullable=False, default=True)
 
