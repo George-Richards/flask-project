@@ -4,7 +4,7 @@ from wtforms.validators import DataRequired, Length
 
 class EntryForm(FlaskForm):
     game_date = DateField("Date of game")
-    team_name = SelectField('Choose Team', choices=[
+    fk_team_name = SelectField('Choose Team', choices=[
         ("arsenal", "Arsenal"),
         ("chelsea", "Chelsea"),
         ("liverpool", "Liverpool"),
@@ -29,8 +29,6 @@ class EntryForm(FlaskForm):
         Length(max=100)
     ])
     submit = SubmitField('Add entry')
-    
-
 
 
 

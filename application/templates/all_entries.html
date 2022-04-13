@@ -1,3 +1,4 @@
+
 {% extends "layout.html" %}
 {% block body %}
 
@@ -5,13 +6,20 @@
 {% for game in all_games %}
 <p>
     {{ game.game_date }}: 
-    <strong> {{ game.team_name }} </strong>
+    <strong> {{ game.fk_team_name }} </strong>
     vs {{ game.opponent }} 
     - {{ game.home_away }}
     - <strong> {{ game.result }} </strong>
-    - {{ game.comment }}
-
+    - <i>{{ game.comment }}</i>
+    - <a href="{{ url_for('delete_game', id=game.id) }}">Delete</a>
+    {% if game.included == False %}
+    <a href="{{ url_for('include_game', included=True, id=game.id) }}">Included</a><br>
+    {% else %}
+    <a href="{{ url_for('include_game', included=False, id=game.id) }}">Not included</a><br>
+    {% endif %} 
 </p> 
-{% endfor %}
-{% endblock body %}
+{% endfor %} <br>
 
+<h3> <a href="{{ url_for('add_game') }}">Add another game</a><br> </h3>
+
+{% endblock body %}

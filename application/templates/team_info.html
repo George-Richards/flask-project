@@ -1,0 +1,17 @@
+{% extends layout.html %}
+{% block body %}
+
+<h2>Here's information about the teams</h2> 
+{% for team in all_teams %}
+<p>
+
+{{ team.id }}
+{{ team.team_name }}
+{{ team.manager }}
+{{ team.ground }}
+
+</p>
+{% endFor %}
+{% endblock body %}
+
+
