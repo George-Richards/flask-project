@@ -2,7 +2,7 @@
 <head>
     <title>Recent Form App</title>
 </head>
-<body style="background-color:#1cc9b8;">
+<body>
     <navbar>
         <a href="{{ url_for('index') }}">Homepage</a>
         <a href="{{ url_for('team_info') }}">Team Information</a> | 
@@ -14,7 +14,9 @@
         <a href="{{ url_for('man_city_entries') }}">Manchester City</a> | 
         <a href="{{ url_for('man_utd_entries') }}">Manchester United</a> | 
         <a href="{{ url_for('tottenham_entries') }}">Tottenham</a> | 
-        <a href="{{ url_for('included_entries') }}">Included Entries</a> |    
+        <a href="{{ url_for('included_entries') }}">Included Entries</a> | 
+        <a href="{{ url_for('table') }}">Table</a> |
+            
 
     </navbar>
     {% block body %}

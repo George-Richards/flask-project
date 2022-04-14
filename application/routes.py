@@ -99,10 +99,29 @@ def team_info():
     all_teams = Teams.query.all()
     return render_template('team_info.html', all_teams=all_teams)
 
+
+def points(name):
+    games = Games.query.filter_by(fk_team_name=name, included=True).order_by(Games.game_date.desc()).limit(5)
+    total_points = 0
+    for game in games:
+        total_points += int(game.points)
+    return total_points
+
 @app.route('/table')
 def table():
-    sum_arsenal = sum(Games.query.get(points))
-    return render_template('table.html', sum_arsenal=sum_arsenal)
+    arsenal = points("arsenal")
+    chelsea = points("chelsea")
+    liverpool = points("liverpool")
+    man_utd = points("man_utd")
+    man_city = points("man_city")
+    tottenham = points("tottenham")
+    return render_template('table.html', arsenal=arsenal, 
+    chelsea=chelsea, liverpool=liverpool,
+    man_city=man_city, man_utd=man_utd, 
+    tottenham=tottenham)
+
+
+
 
 
 

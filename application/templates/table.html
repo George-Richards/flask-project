@@ -1,10 +1,16 @@
 {% extends "layout.html" %}
 {% block body %}
 
-<h2>A table show recent points:</h2> 
-{% for game in ordered_arsenal %}
-<p>
-{{ sum(game.points) }}
-</p> 
-{% endfor %}
+<h1>A table show total points from the 5 most recent included games for each team:</h1> 
+
+<h2> Arsenal: {{ arsenal }} <br>
+Chelsea: {{ chelsea }} <br>
+Liverpool: {{ liverpool }} <br>
+Manchester City: {{ man_city }} <br>
+Manchester United: {{ man_utd }} <br>
+Tottenham: {{ tottenham }} <h2> 
+
 {% endblock body %}
+
+
+
