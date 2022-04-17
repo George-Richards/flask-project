@@ -73,17 +73,3 @@ class TestAdd(TestBase):
         )
         self.assertIn(b'Test1', response.data)
 
-class TestInclude(TestBase):
-    def test_include(self):
-        with self.client:
-            response = self.client.post('/include',
-            data = dict(fk_team_name="Test1", 
-            home_away="Test", 
-            result="Test", 
-            points="Test", 
-            opponent="Test", 
-            comment="Test", 
-            included=True), 
-            follow_redirects=True
-        )
-        self.assertIn(b'Test1', response.data)
