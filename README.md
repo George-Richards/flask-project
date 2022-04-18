@@ -1,7 +1,7 @@
 ## Recent Form App
 ### Project Brief
 <details>
-<summary>"Summary of Project brief requirements"</summary>
+<summary>Summary of Project brief requirements</summary>
 
 The project brief issues the following requirements:  
 * To create a CRUD application with utilisation of supporting tools,
@@ -19,18 +19,18 @@ In order to have the MVP the project requires (summarised):
 
 Following the project brief, I have set about to create a recent form
 application that allows the user to keep track of whichever football games they see fit. In the current stage of application the user may only choose from the 'top 6' teams within the Premier League, but the games that can be entered can currently be from any league, giving the user flexibility in their records. The application comes with several features:  
-* Create a game entry (satisfies 'Create') in which the user is able to input records of football games with the following information:
- * Team Name (out of a choice of 6 from the Teams table)
- * Game Date
- * Home or away
- * Result (Win/Draw/Loss)
- * Points (3/1/0)
- * Opponent (can be from any league/cup currently)
- * Comment (to allow the user to have extra information about the game
- * Included (True/False)
-  * the default option will be 'included'
-  * if a user wishes to not include a game, (for whatever reason but an example could be "there were 2 red cards" or "young team starting") then they can do so through updating this value (satisfies 'Update').
-* Multiple Html pages that display different database information (satisfies 'Read'):
+* Create a game entry (satisfies 'Create') in which the user is able to input records of football games with the following information:  
+  * Team Name (out of a choice of 6 from the Teams table)
+  * Game Date
+  * Home or away
+  * Result (Win/Draw/Loss)
+  * Points (3/1/0)
+  * Opponent (can be from any league/cup currently)
+  * Comment (to allow the user to have extra information about the game
+  * Included (True/False)
+    * the default option will be 'included'
+    * if a user wishes to not include a game, (for whatever reason but an example could be "there were 2 red cards" or "young team starting") then they can do so through updating this value (satisfies 'Update').
+* Multiple Html pages that display different database information (satisfies 'Read'):  
  * Arsenal  
  * Chelsea 
  * Liverpool
