@@ -31,18 +31,18 @@ application that allows the user to keep track of whichever football games they 
     * the default option will be 'included'
     * if a user wishes to not include a game, (for whatever reason but an example could be "there were 2 red cards" or "young team starting") then they can do so through updating this value (satisfies 'Update').
 * Multiple Html pages that display different database information (satisfies 'Read'):  
- * Arsenal  
- * Chelsea 
- * Liverpool
- * Manchester City
- * Manchester United
- * Tottenham
- * Team Information
- * All Entries
- * Included Entries (entries with the included value set to true) 
- * Recent Form (a page that displays a sum of the 5 most recent included=True entries)
+  * Arsenal  
+  * Chelsea 
+  * Liverpool
+  * Manchester City
+  * Manchester United
+  * Tottenham
+  * Team Information
+  * All Entries
+  * Included Entries (entries with the included value set to true) 
+  * Recent Form (a page that displays a sum of the 5 most recent included=True entries)
 * Delete Feature (satisfies 'Delete'):
- * Any games that have been entered into the system come with a delete button that allows the user to remove it from database.  
+  * Any games that have been entered into the system come with a delete button that allows the user to remove it from database.  
 
 ### Entity Relationship Diagram
 Here is the ERD relationship diagram, modelling the interactions between my databases:  
