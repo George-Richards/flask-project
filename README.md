@@ -50,7 +50,8 @@ application that allows the user to keep track of whichever football games they 
 
 ### Entity Relationship Diagram
 Here is the ERD relationship diagram, modelling the interactions between my databases:  
-![ERD](https://photos.google.com/photo/AF1QipN-221GF4cFUJh2UGqwcHswAOntGzgn4FGilhE)  
+![ERD](https://drive.google.com/file/d/1mlSpFh55QYBSEO9k5Oy9ZFDWR9EUFu5b/view?usp=sharing)  
+Link to image: https://drive.google.com/file/d/1mlSpFh55QYBSEO9k5Oy9ZFDWR9EUFu5b/view?usp=sharing  
 The database relationship is modelled here with the green tables being tables that have been implemented and red being tables that are set to be implemented in the future. The green databases (Teams and Games) are linked through a one mandatory (Teams) to many optional (Games) as each team may play many games, but exist whether they have had game entries or not, and no game can exist without there being a team (and the game entry cannot include more than one team at a time). In the future, there may also be a new table (Game Type) that models a similar relationship towards Games, but that has a many optional to many optional relationship towards teams as both Teams and Game Types can contain multiple of each other, or none.  
 
 ### Trello Board
@@ -58,6 +59,7 @@ Here is a screenshot of the kanban board used in my project to demonstrate the p
 Here is a link to the full Trello Board:  
 https://trello.com/b/UJVoEN6i/first-flask-project  
 ![Trello Board](https://drive.google.com/file/d/1D1OAN2PYvpsMsk08xewifjz91pF92Ej1/view?usp=sharing)  
+Link to image: https://drive.google.com/file/d/1D1OAN2PYvpsMsk08xewifjz91pF92Ej1/view?usp=sharing  
 The project tracks progress from start to finish using the following headings that mark the position:
 * User Stories - a set of parameters I have designed to implement the application from the point of view as a user. The user stories have been colour coded according to at which point in my to do list the tasks related to it occur (green='completed', yellow='doing', red='to do') 
 * To Do - the original state of each task (no development having been completed in any task under this heading)
@@ -69,26 +71,34 @@ The project tracks progress from start to finish using the following headings th
 The following paragraph demostrates the way in which the application works and how the user may interact with it. It is also the expected outcome for anyone looking to clone down this repository.  
 The url itself takes the user to the homepage (index):  
 ![Homepage](https://drive.google.com/file/d/10gu-X84RmqKHuyFhznJeQ-h_JmQg0UoW/view?usp=sharing)  
+Link to image: https://drive.google.com/file/d/10gu-X84RmqKHuyFhznJeQ-h_JmQg0UoW/view?usp=sharing  
 
 From here you may navigate the page. To enter a new game you need to navigate to the 'Add Game' section of the navigation bar.  
 This will show the following page:  
 ![Add Game](https://drive.google.com/file/d/1V_9Pk8cVZN0wTJok25iWvVe8u4bwfJKu/view?usp=sharing)  
+Link to image: https://drive.google.com/file/d/1V_9Pk8cVZN0wTJok25iWvVe8u4bwfJKu/view?usp=sharing  
 Games that have been entered will then be sorted into their appropriate html pages to allow for easy viewing for the user. All database entries will be included in the 'All Entries' section, from which the user can choose to include or delete any entry.  
 ![All Entries](https://drive.google.com/file/d/1V5pHekIigHKKlXaNIIyHvmj8jXg_GDSq/view?usp=sharing)  
+Link to image: https://drive.google.com/file/d/1V5pHekIigHKKlXaNIIyHvmj8jXg_GDSq/view?usp=sharing  
 The games will also be sorted into a page for each of the team entries, for example all Arsenal game entries are included in the 'Arsenal' page:  
 ![Arsenal](https://drive.google.com/file/d/10WaayqvwmSfYNDefcpK45XlpOZWc2L_p/view?usp=sharing)  
+Link to image: https://drive.google.com/file/d/10WaayqvwmSfYNDefcpK45XlpOZWc2L_p/view?usp=sharing   
 If the games 'included' value is set to true (as is default), the most recent 5, in date order and for each team, will be included in the 'included entries' page.  
 ![Included Entries](https://drive.google.com/file/d/1RShkBvw5kBRsIIqVyN0dGRM80jZ3Pqsg/view?usp=sharing)  
+Link to image:  https://drive.google.com/file/d/1RShkBvw5kBRsIIqVyN0dGRM80jZ3Pqsg/view?usp=sharing
 Of the game entries that are 'included', the points values will be summed and displayed on the 'Table' page as follows:  
 ![Table](https://drive.google.com/file/d/126XKGZt79ykeldU4mLHOPvyQq2uDSAkt/view?usp=sharing)  
+Link to image:  https://drive.google.com/file/d/126XKGZt79ykeldU4mLHOPvyQq2uDSAkt/view?usp=sharing
 
 ### Testing
 The application uses pytest to unit-test for server responses on each of the web pages and tests that the 'create' function of the application (adding a game entry) works as it should. Jenkins automates these tests and produces detailed coverage reports. The reports recieved in this application detail a high level of coverage, with room for improvement detailed in the 'missing' lines element.  
 ![Tests](https://drive.google.com/file/d/19CCr2DEPxCQL8RdMNwpO4R21ny0zz4gc/view?usp=sharing)  
+Link to image:  https://drive.google.com/file/d/19CCr2DEPxCQL8RdMNwpO4R21ny0zz4gc/view?usp=sharing  
 
 ### CI Pipeline
 The CI pipeline for this application details the automated integration process that Jenkins utilises. Code is uploaded from a local machine to github (or work is taken from the kanban board) where it is then pushed to the CI server through a webhook, tested using pytest, and returned back through github and out to the virtual machine. As such, it automates the integration process and produces detailed reports as they occur.  
-![CI Pipeline](https://drive.google.com/file/d/1yy0EFIUoe_P1vOmKv06UjJ4qDOurB5Gj/view?usp=sharing)
+![CI Pipeline](https://drive.google.com/file/d/1yy0EFIUoe_P1vOmKv06UjJ4qDOurB5Gj/view?usp=sharing)  
+Link to image:  https://drive.google.com/file/d/1yy0EFIUoe_P1vOmKv06UjJ4qDOurB5Gj/view?usp=sharing
 
 ### Risk Assessment
 Here is a link to my risk assessment: https://docs.google.com/spreadsheets/d/1AS53x9t-2XX8800BTLzhhC-bXG4_zt8z/edit?usp=sharing&ouid=103462476978780985311&rtpof=true&sd=true
