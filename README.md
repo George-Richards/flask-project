@@ -50,8 +50,8 @@ application that allows the user to keep track of whichever football games they 
   * Any games that have been entered into the system come with a delete button that allows the user to remove it from database.  
 
 ### Entity Relationship Diagram
-Here is the ERD relationship diagram, modelling the interactions between my databases:  
-![ERD](https://drive.google.com/file/d/1mlSpFh55QYBSEO9k5Oy9ZFDWR9EUFu5b/view?usp=sharing)  
+Here is the ERD relationship diagram, modelling the interactions between my databases:    
+![picture9](https://user-images.githubusercontent.com/101715863/163982727-f56a640e-0d89-4ea3-a054-325fbb0b41ff.png)
 Link to image: https://drive.google.com/file/d/1mlSpFh55QYBSEO9k5Oy9ZFDWR9EUFu5b/view?usp=sharing  
 The database relationship is modelled here with the green tables being tables that have been implemented and red being tables that are set to be implemented in the future. The green databases (Teams and Games) are linked through a one mandatory (Teams) to many optional (Games) as each team may play many games, but exist whether they have had game entries or not, and no game can exist without there being a team (and the game entry cannot include more than one team at a time). In the future, there may also be a new table (Game Type) that models a similar relationship towards Games, but that has a many optional to many optional relationship towards teams as both Teams and Game Types can contain multiple of each other, or none.  
 
@@ -59,7 +59,7 @@ The database relationship is modelled here with the green tables being tables th
 Here is a screenshot of the kanban board used in my project to demonstrate the progression that has occured.  
 Here is a link to the full Trello Board:  
 https://trello.com/b/UJVoEN6i/first-flask-project  
-![Trello Board](https://drive.google.com/file/d/1D1OAN2PYvpsMsk08xewifjz91pF92Ej1/view?usp=sharing)  
+![2022-04-19 (18)](https://user-images.githubusercontent.com/101715863/163982907-b2c54317-b922-4098-bb85-666b20ae3426.png)
 Link to image: https://drive.google.com/file/d/1D1OAN2PYvpsMsk08xewifjz91pF92Ej1/view?usp=sharing  
 The project tracks progress from start to finish using the following headings that mark the position:
 * User Stories - a set of parameters I have designed to implement the application from the point of view as a user. The user stories have been colour coded according to at which point in my to do list the tasks related to it occur (green='completed', yellow='doing', red='to do') 
@@ -71,34 +71,34 @@ The project tracks progress from start to finish using the following headings th
 ### Application Front-End Demonstration
 The following paragraph demostrates the way in which the application works and how the user may interact with it. It is also the expected outcome for anyone looking to clone down this repository.  
 The url itself takes the user to the homepage (index):  
-![Homepage](https://drive.google.com/file/d/10gu-X84RmqKHuyFhznJeQ-h_JmQg0UoW/view?usp=sharing)  
+![Picture3](https://user-images.githubusercontent.com/101715863/163983236-2f5454d5-f60d-4da7-aa49-2f7af97e0e8e.png)   
 Link to image: https://drive.google.com/file/d/10gu-X84RmqKHuyFhznJeQ-h_JmQg0UoW/view?usp=sharing  
 
 From here you may navigate the page. To enter a new game you need to navigate to the 'Add Game' section of the navigation bar.  
 This will show the following page:  
-![Add Game](https://drive.google.com/file/d/1V_9Pk8cVZN0wTJok25iWvVe8u4bwfJKu/view?usp=sharing)  
+![picture](https://user-images.githubusercontent.com/101715863/163984147-733eeb85-9b86-43c5-93f4-c2eead066797.png)  
 Link to image: https://drive.google.com/file/d/1V_9Pk8cVZN0wTJok25iWvVe8u4bwfJKu/view?usp=sharing  
 Games that have been entered will then be sorted into their appropriate html pages to allow for easy viewing for the user. All database entries will be included in the 'All Entries' section, from which the user can choose to include or delete any entry.  
-![All Entries](https://drive.google.com/file/d/1V5pHekIigHKKlXaNIIyHvmj8jXg_GDSq/view?usp=sharing)  
+![picture4](https://user-images.githubusercontent.com/101715863/163985026-67021511-cd5e-4e5a-bac9-f90998f78cc9.png) 
 Link to image: https://drive.google.com/file/d/1V5pHekIigHKKlXaNIIyHvmj8jXg_GDSq/view?usp=sharing  
 The games will also be sorted into a page for each of the team entries, for example all Arsenal game entries are included in the 'Arsenal' page:  
-![Arsenal](https://drive.google.com/file/d/10WaayqvwmSfYNDefcpK45XlpOZWc2L_p/view?usp=sharing)  
+![picture5](https://user-images.githubusercontent.com/101715863/163986104-9da5ddfd-c17a-46c5-8825-d8f374a085df.png)  
 Link to image: https://drive.google.com/file/d/10WaayqvwmSfYNDefcpK45XlpOZWc2L_p/view?usp=sharing   
 If the games 'included' value is set to true (as is default), the most recent 5, in date order and for each team, will be included in the 'included entries' page.  
-![Included Entries](https://drive.google.com/file/d/1RShkBvw5kBRsIIqVyN0dGRM80jZ3Pqsg/view?usp=sharing)  
+![picture6](https://user-images.githubusercontent.com/101715863/163987019-9025ed65-cdd2-4d83-bd96-efd50a542959.png) 
 Link to image:  https://drive.google.com/file/d/1RShkBvw5kBRsIIqVyN0dGRM80jZ3Pqsg/view?usp=sharing
 Of the game entries that are 'included', the points values will be summed and displayed on the 'Table' page as follows:  
-![Table](https://drive.google.com/file/d/126XKGZt79ykeldU4mLHOPvyQq2uDSAkt/view?usp=sharing)  
+![picture7](https://user-images.githubusercontent.com/101715863/163987314-64702fa3-7676-4dbd-9d5e-2e449223c1ef.png)
 Link to image:  https://drive.google.com/file/d/126XKGZt79ykeldU4mLHOPvyQq2uDSAkt/view?usp=sharing
 
 ### Testing
 The application uses pytest to unit-test for server responses on each of the web pages and tests that the 'create' function of the application (adding a game entry) works as it should. Jenkins automates these tests and produces detailed coverage reports. The reports recieved in this application detail a high level of coverage, with room for improvement detailed in the 'missing' lines element.  
-![Tests](https://drive.google.com/file/d/19CCr2DEPxCQL8RdMNwpO4R21ny0zz4gc/view?usp=sharing)  
+![Picture2](https://user-images.githubusercontent.com/101715863/163987438-ec55a7a1-3760-46ae-9e61-f00843f313cc.png)
 Link to image:  https://drive.google.com/file/d/19CCr2DEPxCQL8RdMNwpO4R21ny0zz4gc/view?usp=sharing  
 
 ### CI Pipeline
 The CI pipeline for this application details the automated integration process that Jenkins utilises. Code is uploaded from a local machine to github (or work is taken from the kanban board) where it is then pushed to the CI server through a webhook, tested using pytest, and returned back through github and out to the virtual machine. As such, it automates the integration process and produces detailed reports as they occur.  
-![CI Pipeline](https://drive.google.com/file/d/1yy0EFIUoe_P1vOmKv06UjJ4qDOurB5Gj/view?usp=sharing)  
+![2022-04-19 (9)](https://user-images.githubusercontent.com/101715863/163987925-6cf32343-bf0f-41bc-84a5-cf3330cee701.png)  
 Link to image:  https://drive.google.com/file/d/1yy0EFIUoe_P1vOmKv06UjJ4qDOurB5Gj/view?usp=sharing
 
 ### Risk Assessment
