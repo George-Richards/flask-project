@@ -1,6 +1,7 @@
 ## Recent Form App
 
-Link to Video Presentation: https://drive.google.com/file/d/1pn2Sm2EMzdhXzKW5r8MyGPq-a1r4ljug/view?usp=sharing
+Link to Video Presentation: https://drive.google.com/file/d/1pn2Sm2EMzdhXzKW5r8MyGPq-a1r4ljug/view?usp=sharing  
+*Please note there is a small error on the video @ 10:20, the foreign key talked about is in the GAMES table, not TEAMS (it is the primary key of TEAMS)
 
 ### Project Brief
 <details>
