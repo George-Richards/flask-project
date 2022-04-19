@@ -50,7 +50,7 @@ application that allows the user to keep track of whichever football games they 
 
 ### Entity Relationship Diagram
 Here is the ERD relationship diagram, modelling the interactions between my databases:  
-![ERD](https://drive.google.com/file/d/1mlSpFh55QYBSEO9k5Oy9ZFDWR9EUFu5b/view?usp=sharing)  
+![ERD](https://drive.google.com/file/d/1mlSpFh55QYBSEO9k5Oy9ZFDWR9EUFu5b/view?usp=sharing.png)  
 The database relationship is modelled here with the green tables being tables that have been implemented and red being tables that are set to be implemented in the future. The green databases (Teams and Games) are linked through a one mandatory (Teams) to many optional (Games) as each team may play many games, but exist whether they have had game entries or not, and no game can exist without there being a team (and the game entry cannot include more than one team at a time). In the future, there may also be a new table (Game Type) that models a similar relationship towards Games, but that has a many optional to many optional relationship towards teams as both Teams and Game Types can contain multiple of each other, or none.  
 
 ### Trello Board
