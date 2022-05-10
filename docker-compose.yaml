@@ -2,7 +2,7 @@ version: '3.8'
 services:
   service1:
     image: georgerichards1/flask-project:latest
-    build: ./application
+    build: ./
     ports:
     - target: 5000
       published: 5000
